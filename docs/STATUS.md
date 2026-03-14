@@ -31,6 +31,8 @@ This override is now being executed as a real bootstrap/tooling block rather tha
   - initialized the repo as Git
   - set repo-local Git identity to `Sawyer Matzke <sawyermatzke@github.com>`
   - added approved remote `git@github.com:sawyermatzke/flick_soccer.git`
+  - created the first coherent commit for the repo
+  - pushed `main` to `origin`
 
 ## What is now true
 - the repo is no longer only an `Assets/` + docs partial checkout; it now has the minimum committed Unity project-shell artifacts needed for a later editor import attempt
@@ -95,4 +97,4 @@ This override is now being executed as a real bootstrap/tooling block rather tha
 Halt if continuation would require scenes, runtime gameplay objects, vendor transport/persistence SDK wiring, CI/editor automation, geometry-backed implementation, invented coordinates, or any scope beyond Unity import/test enablement.
 
 ## Repo state
-Repo now contains the first pre-geometry `Core.Contracts` / `Core.Sync` scaffold under `Assets/Binho/Core`, the minimum Unity shell under `Packages/` and `ProjectSettings/`, a documented Unity editor baseline in `docs/UNITY_EDITOR_BASELINE.md`, an execution log in `docs/UNITY_BOOTSTRAP_VALIDATION_LOG.md`, and a Unity-oriented `.gitignore`. The repository is now Git-initialized with repo-local identity configured and approved remote `origin` set to `git@github.com:sawyermatzke/flick_soccer.git`. Host-side Unity import/test execution is still pending because the editor/tooling is not yet installed on this machine.
+Repo now contains the first pre-geometry `Core.Contracts` / `Core.Sync` scaffold under `Assets/Binho/Core`, the minimum Unity shell under `Packages/` and `ProjectSettings/`, a documented Unity editor baseline in `docs/UNITY_EDITOR_BASELINE.md`, an execution log in `docs/UNITY_BOOTSTRAP_VALIDATION_LOG.md`, and a Unity-oriented `.gitignore`. The repository is now Git-initialized with repo-local identity configured, approved remote `origin` set to `git@github.com:sawyermatzke/flick_soccer.git`, and `main` pushed upstream. Host-side Unity import/test execution is still pending because the editor/tooling is not yet installed on this machine.

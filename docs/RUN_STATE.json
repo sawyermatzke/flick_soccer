@@ -9,8 +9,8 @@
   },
   "lastCompletedBlock": {
     "type": "bootstrap-execution",
-    "completedAt": "2026-03-13T21:45:11-07:00",
-    "summary": "Executed the approved broader Unity bootstrap tranche on-host: restored minimum repo-side Unity shell (`Packages/manifest.json`, `ProjectSettings/ProjectVersion.txt`), selected Unity 2022.3 LTS / 2022.3.70f1 bootstrap pin as the conservative compatible editor baseline, logged the first bootstrap-validation state, confirmed this Ubuntu host still lacks Unity/editor tooling, identified `libfuse2t64` as the minimum known sudo-needed package for the common Unity Hub AppImage path here, and initialized Git with repo-local identity plus approved GitHub remote."
+    "completedAt": "2026-03-13T21:49:52-07:00",
+    "summary": "Executed the approved broader Unity bootstrap tranche on-host: restored minimum repo-side Unity shell (`Packages/manifest.json`, `ProjectSettings/ProjectVersion.txt`), selected Unity 2022.3 LTS / 2022.3.70f1 bootstrap pin as the conservative compatible editor baseline, logged the first bootstrap-validation state, confirmed this Ubuntu host still lacks Unity/editor tooling, identified `libfuse2t64` as the minimum known sudo-needed package for the common Unity Hub AppImage path here, initialized Git with repo-local identity plus approved GitHub remote, committed the repo, and pushed `main` to origin."
   },
   "lastScheduledBlock": {
     "type": "blocked-awaiting-approval",
@@ -82,6 +82,7 @@
     "2026-03-13T21:43:00-07:00 executed the repo-side bootstrap portion of the approved tranche by restoring `Packages/manifest.json` with only `com.unity.test-framework` and `ProjectSettings/ProjectVersion.txt`, turning the checkout into a minimum Unity project shell rather than an Assets-only partial repo.",
     "2026-03-13T21:44:00-07:00 selected Unity 2022.3 LTS as the conservative compatible first-validation editor family because the current code already uses C# 10-era syntax such as file-scoped namespaces; documented the baseline in `docs/UNITY_EDITOR_BASELINE.md` and pinned `ProjectVersion.txt` to `2022.3.70f1`.",
     "2026-03-13T21:45:00-07:00 host tooling inspection confirmed `git` and `ssh` are present but no Unity/editor/C# toolchain binaries are in PATH; on this Ubuntu 24.04 host the minimum known sudo-needed package for the common Unity Hub AppImage path is `libfuse2t64`.",
-    "2026-03-13T21:45:00-07:00 initialized Git in the repo, set repo-local identity to Sawyer Matzke <sawyermatzke@github.com>, and added approved remote `git@github.com:sawyermatzke/flick_soccer.git`."
+    "2026-03-13T21:45:00-07:00 initialized Git in the repo, set repo-local identity to Sawyer Matzke <sawyermatzke@github.com>, and added approved remote `git@github.com:sawyermatzke/flick_soccer.git`.",
+    "2026-03-13T21:49:00-07:00 created the first coherent Git commit for the repo and successfully pushed `main` to `git@github.com:sawyermatzke/flick_soccer.git`."
   ]
 }
