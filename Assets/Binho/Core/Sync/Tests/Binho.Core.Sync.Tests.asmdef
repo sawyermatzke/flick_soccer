@@ -1,0 +1,6 @@
+{
+  "name": "Binho.Core.Sync.Tests",
+  "references": ["Binho.Core.Contracts", "Binho.Core.Sync"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "includePlatforms": ["Editor"]
+}

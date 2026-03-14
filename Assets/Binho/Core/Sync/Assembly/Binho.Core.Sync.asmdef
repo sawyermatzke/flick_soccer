@@ -1,0 +1,4 @@
+{
+  "name": "Binho.Core.Sync",
+  "references": ["Binho.Core.Contracts"]
+}

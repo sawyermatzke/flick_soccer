@@ -1,0 +1,87 @@
+{
+  "project": "binho-ios",
+  "status": "active",
+  "mode": "autonomous-overnight",
+  "runWindow": {
+    "start": "2026-03-13T19:36:00-07:00",
+    "stop": "2026-03-14T08:00:00-07:00",
+    "timezone": "America/Los_Angeles"
+  },
+  "lastCompletedBlock": {
+    "type": "bootstrap-execution",
+    "completedAt": "2026-03-13T21:45:11-07:00",
+    "summary": "Executed the approved broader Unity bootstrap tranche on-host: restored minimum repo-side Unity shell (`Packages/manifest.json`, `ProjectSettings/ProjectVersion.txt`), selected Unity 2022.3 LTS / 2022.3.70f1 bootstrap pin as the conservative compatible editor baseline, logged the first bootstrap-validation state, confirmed this Ubuntu host still lacks Unity/editor tooling, identified `libfuse2t64` as the minimum known sudo-needed package for the common Unity Hub AppImage path here, and initialized Git with repo-local identity plus approved GitHub remote."
+  },
+  "lastScheduledBlock": {
+    "type": "blocked-awaiting-approval",
+    "scheduledFor": null,
+    "jobName": "Await approval/install of libfuse2t64, then continue Unity 2022.3 LTS import/EditMode validation on this host",
+    "jobId": null
+  },
+  "nextIntendedPriority": [
+    "install-libfuse2t64-and-unity-tooling-on-this-host",
+    "import-and-run-first-editmode-validation",
+    "pre-geometry-core-code-correction-if-failures-are-tranche-code",
+    "review-core-contracts-core-sync-repo-integration-and-toolchain-readiness",
+    "research-review",
+    "layout-research",
+    "implementation-when-safe"
+  ],
+  "constraints": {
+    "doNotAssumeBoardLayout": true,
+    "requireConfirmedVsInferredSeparation": true,
+    "liveMultiplayerIsMVP": true,
+    "brandingMustBeSwappable": true,
+    "physicalOnlyRulesNeedDigitalAdaptation": true
+  },
+  "readiness": {
+    "rulesConfidence": "medium",
+    "layoutConfidence": "low",
+    "implementationReady": false,
+    "blockingReason": "The repo now has a minimum Unity project shell (`Packages/manifest.json`, `ProjectSettings/ProjectVersion.txt`) and a chosen 2022.3 LTS editor baseline, but first real compile/test validation on this Ubuntu host is still blocked because no Unity Editor/Hub is installed locally yet; the minimum known system dependency gap for the common AppImage path here is `libfuse2t64`, after which Unity 2022.3 LTS import and the first EditMode validation pass should be attempted before any wider work."
+  },
+  "stallPolicy": {
+    "considerStalledAfterMinutes": 25,
+    "safetyNetMayReschedule": true,
+    "doNotDuplicateIfRecentBlockActive": true
+  },
+  "schedulingPolicy": {
+    "mode": "immediate-chain",
+    "defaultBufferMinutes": 1,
+    "useCurrentSystemTimeForNextBlock": true,
+    "avoidCoarseCadenceDelays": true,
+    "defaultCronDeliveryMode": "none"
+  },
+  "notes": [
+    "Use STATUS.md for human-readable summary.",
+    "Use BACKLOG.md for priorities.",
+    "Use RUN_STATE.json for machine-readable orchestration context.",
+    "2026-03-13T21:24:00-07:00 human override approved broadening into the Unity bootstrap/tooling tranche on this host: restore/create minimum project bootstrap, choose conservative LTS-compatible editor, install minimum host tooling needed for first validation, and prefer execution over further doc-only planning.",
+    "2026-03-13T21:35:00-07:00 human override added Git/GitHub policy: initialize git if needed during the broader bootstrap tranche, use repo-local identity Sawyer Matzke <sawyermatzke@github.com>, and push coherent progress to git@github.com:sawyermatzke/flick_soccer.git.",
+    "2026-03-13T20:01:00-07:00 overnight safety-net de-duplicated overlapping review jobs and kept the earlier 20:05 review block to avoid duplicate work.",
+    "2026-03-13T20:19:00-07:00 scheduling policy changed to immediate-chain; future blocks should use current system time and about a 1-minute default buffer.",
+    "2026-03-13T20:23:00-07:00 autonomous cron delivery default changed to none to avoid misrouted announce delivery.",
+    "2026-03-13T20:26:00-07:00 pre-geometry architecture planning established semantic-authority multiplayer boundaries and Unity module seams without inventing coordinates.",
+    "2026-03-13T20:31:00-07:00 multiplayer stack evaluation favored server-authoritative semantic room state, with Nakama as the leading stack candidate and Photon Fusion retained as the main Unity-native fallback.",
+    "2026-03-13T20:33:00-07:00 room lifecycle analysis defined a server-owned private-room state machine, snapshot-based resume policy, and timeout/abandon/rematch rules; this reinforced the Nakama-first direction over host-dependent alternatives.",
+    "2026-03-13T20:36:00-07:00 sync-contract planning defined the room snapshot payload, reconnect acknowledgment and watermark flow, timeout/grace timer contract, and minimum resume/abandon/rematch command-event additions without crossing into geometry-dependent implementation.",
+    "2026-03-13T20:39:00-07:00 DTO boundary planning separated room-scoped vs match-scoped contracts/events, defined minimum snapshot/event/timer/watermark persistence shapes, and set rematch to create fresh match-scoped history while preserving room continuity.",
+    "2026-03-13T20:43:00-07:00 scaffolding planning defined the first safe Assets/Binho/Core folder map, DTO/type inventory, abstraction-first Core.Sync seams, and serialization/unit-test checklist for pre-geometry package creation.",
+    "2026-03-13T20:45:00-07:00 tranche planning narrowed the scaffold into a four-assembly first implementation slice with explicit file order, DTO priorities, in-memory adapter limits, and a focused test matrix for serialization, watermarks, rematch boundaries, and room-vs-match separation.",
+    "2026-03-13T20:47:00-07:00 checklist/fixture planning produced a dedicated coding handoff doc with phase-ordered file creation, namespace/asmdef guidance, concrete JSON fixtures, and an exact validation inventory for the first Core.Contracts/Core.Sync coding block.",
+    "2026-03-13T20:55:00-07:00 DTO-shell planning pinned exact day-one versus deferred fields, added minimal validator/helper pseudocode, and translated the first tranche into concrete test file/method naming and execution order.",
+    "2026-03-13T20:57:00-07:00 final ambiguity sweep removed the RoomLifecycleState-vs-RoomPhase naming drift, classified acknowledgeSnapshot/startMatch as room-lifecycle commands, moved TimerRecordScope into shared metadata, and assigned scope validators to a dedicated Core.Sync.Validation seam before implementation starts.",
+    "2026-03-13T21:09:00-07:00 first safe Core.Contracts/Core.Sync scaffold tranche implemented under Assets/Binho/Core with asmdefs, DTO shells, scope validators, watermark/resume helpers, in-memory adapters, and planned tests; automated compile/test execution remains pending because the current host lacks dotnet/C# and Unity runner tooling.",
+    "2026-03-13T21:12:00-07:00 review pass confirmed the scaffold still fits the clarified pre-geometry tranche, fixed a missing SnapshotAckHandler using/import for IClock resolution, and flagged production-assembly placement of TestClock/TestIdGenerator as the next repo-integration sanity check.",
+    "2026-03-13T21:15:00-07:00 repo-integration review moved TestClock/TestIdGenerator into the sync test assembly subtree, confirmed the asmdef graph still stays within the tranche boundary, and identified the next blocker as missing local Unity/C# tooling plus likely missing wider Unity project bootstrap context in this checkout.",
+    "2026-03-13T21:18:00-07:00 compile/test bootstrap review confirmed the current checkout is only a partial Unity-shaped repo (Assets/docs/research without Packages or ProjectSettings), that this host has no discoverable Unity or standalone C# build tools, and that the clean next safe step is a handoff-quality prerequisite checklist for an adjacent Unity-capable validation environment.",
+    "2026-03-13T21:20:00-07:00 Unity validation handoff documented the minimum repo bootstrap (`Packages/`, `ProjectSettings/`), host tooling (Unity Editor), and first EditMode validation sequence required before the current Core.Contracts/Core.Sync test asmdefs can run; creation of the broader Unity project skeleton remains deferred to a later wider bootstrap tranche.",
+    "2026-03-13T21:24:00-07:00 wider-bootstrap boundary review added `docs/UNITY_BOOTSTRAP_TRANCHE_BOUNDARY.md`, constrained the later broader Unity bootstrap tranche to import/test enablement only, updated backlog/decision docs to reflect that boundary, and chained a follow-up review block to turn the boundary into a future execution checklist/log template without creating the Unity project skeleton yet.",
+    "2026-03-13T21:25:00-07:00 bootstrap-execution-checklist review added `docs/UNITY_BOOTSTRAP_EXECUTION_CHECKLIST.md`, defining the exact future bootstrap/import phase checklist, validation-log template, and bootstrap-vs-editor-compatibility-vs-tranche-code failure classification so the later Unity-capable run stays mechanically bounded to import/test enablement only.",
+    "2026-03-13T21:30:00-07:00 bootstrap-handoff completeness review added explicit role-split notes to the three Unity bootstrap docs, confirmed no further high-value doc-only tightening remains, and marked the repo pause-ready until a later Unity-capable bootstrap/import tranche exists.",
+    "2026-03-13T21:43:00-07:00 executed the repo-side bootstrap portion of the approved tranche by restoring `Packages/manifest.json` with only `com.unity.test-framework` and `ProjectSettings/ProjectVersion.txt`, turning the checkout into a minimum Unity project shell rather than an Assets-only partial repo.",
+    "2026-03-13T21:44:00-07:00 selected Unity 2022.3 LTS as the conservative compatible first-validation editor family because the current code already uses C# 10-era syntax such as file-scoped namespaces; documented the baseline in `docs/UNITY_EDITOR_BASELINE.md` and pinned `ProjectVersion.txt` to `2022.3.70f1`.",
+    "2026-03-13T21:45:00-07:00 host tooling inspection confirmed `git` and `ssh` are present but no Unity/editor/C# toolchain binaries are in PATH; on this Ubuntu 24.04 host the minimum known sudo-needed package for the common Unity Hub AppImage path is `libfuse2t64`.",
+    "2026-03-13T21:45:00-07:00 initialized Git in the repo, set repo-local identity to Sawyer Matzke <sawyermatzke@github.com>, and added approved remote `git@github.com:sawyermatzke/flick_soccer.git`."
+  ]
+}
